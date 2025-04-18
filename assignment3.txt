@@ -1,0 +1,90 @@
+Assignment 3
+
+1. ls - Display hidden files
+ls -a
+
+2. rename - Rename all *.txt files to *.htm
+rename "s/txt/htm/" *txt
+
+3.ln -s - Create symbolic link (shortcut) for a file
+ln -s dir1/dir2/file.txt myfile.txt   (it creates a shortcut to file.txt present in other directory)
+
+4. ln - Create hard link for a file
+ln my_Project_file.txt proj.txt
+
+5. stat - Display time stamp of the file
+stat %w file.txt
+
+6. touch - Change the time stamp of the file
+touch -d "2020-01-01 12:12" file.txt
+
+7. touch - Create empty file
+touch file1.txt
+
+8. tail - Print all lines in a file from fifth line onwards
+tail +5 file.txt
+
+9. init 0, poweroff - Shutdown (Only for super-user)
+sudo init 0
+sudo poweroff
+
+10. init 6, reboot - Reboot (Only for super-user)
+sudo init 6
+sudo reboot
+
+12. whoami - Find current user
+whoami
+
+13. tty - Find current terminal
+tty
+
+14. who am i - Find current user and terminal
+who
+
+15. users - Find all users logged into the system
+users
+
+16. who - Find all users logged in and terminals in use
+who -u
+
+17. grep, egrep, fgrep - Find a given word/pattern from the file
+grep "DAC" file.txt          #display all those lines having "DAC" in it
+egrep "da+c" file.txt        # '+' checks for one or more occurences of previous character
+fgrep -c "dac" file.txt      # Displays the count of number of matches.
+
+18. chmod - Make a file as read-only
+chmod 444 file.txt
+
+19. chmod - Make a file as write, read and execute
+chmod 777 file.txt
+
+20. wc (using redirection)Take input from the file, count words and store output to other file
+wc file.txt > sample.txt
+
+21. who | wc (using pipe)Count words in output of “who” command
+who | wc -w
+
+22. head, tail (using pipe)Print lines 5 to 10 from the given file
+head -10 file.txt | tail -6
+
+23. sort , uniq (using pipe)Print the uniq values from the unsorted file
+sort file.txt | uniq
+
+24. who, grep (using pipe)Display all users not using tty2, tty3, tty4
+who | grep -v "tty[2,3,4]"
+
+25. ls - Display all files in ascending order of their file size
+ls -S -r
+
+26. ls, grep (using pipe)Count number of files and directories from current directory
+ls -l | grep ^[-,d] | wc -l
+
+27. ls, grep (using pipe)Display only hidden files in a directory
+ls -a | grep ^[.]
+
+28. tr - Convert file contents into uppercase , also learn "-s" option of this command
+cat data.txt | tr "A-Z" "a-z"
+cat data.txt | tr -s " "
+
+29. cut - Split the file contents using delimiter and print required fields
+cat -d " " f1 data.txt
