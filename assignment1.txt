@@ -1,0 +1,104 @@
+1. man - Command to get help about commands
+man ls
+man rm
+
+2. uname - Print System information
+uname -a
+
+3. pwd - Print current directory
+pwd
+
+4. hostname - Print IP address and hostname of the machine
+hostname -I
+
+5. date - Find today’s date
+date
+
+6. cal - Print calendar for current year
+cal -y 2025
+
+7. ls, dir - see directory structure
+ls -R
+dir
+
+8. cat - create file
+cat > file.txt
+
+9. cat >> - Append some text into existing file
+cat >> file.txt
+Sunbeam
+
+10. cp - Copy a file, Copy a directory
+cp file.txt dir1   - this will copy file.txt into dir1 directory
+cp dir1 dir2       - this wlll copy dir1 in dir2 directory
+
+11. mv - Move the files
+mv file.txt dir1    -this will move file.txt into dir1
+
+12. mv - Rename a file
+mv file.txt demo.txt
+
+13. tac, rev - Print the file in reverse order, reverse each line in the file
+rev file.txt
+tac file.txt
+
+14. wc - counts the words, characters and lines in a file
+wc -w file.txt
+wc -c file.txt
+wc -l file.txt
+
+15. mkdir - create directory
+mkdir classwork
+
+16. cd - Change current directory
+cd dir1/dir2
+
+17. rm - Remove a file, remove a directory ( with -R )
+rm file.txt
+rm -R dir1
+
+18. rmdir - remove empty directory
+rmdir dir2
+
+19. touch - change the modification time , Create Multiple empty files at once.
+touch -m file.txt
+touch file1.txt file2.txt file3.txt
+
+20. sort - Sort file.
+sort -n file.txt
+
+21. uniq - Avoid repetition in a file.
+sort file.txt | uniq
+
+22. head - Print the specified number of lines from top in the file.
+head -5 file.txt
+
+23. tail - Print the specified number of lines from bottom in the file.
+tail -4 file.txt
+
+24. factor - Find the factors of a number
+factor 100
+output: 2 2 5 5 
+
+25. alias - Create command shortcut
+alias del='rm -R'
+del dir1
+
+26. unalias - remove the command shortcut
+unalias del
+
+27. echo - Print environment variables individually
+echo $USER
+echo $PATH
+echo $HOME
+echo $SHELL
+
+28. ps - Print current processes
+ps -e
+
+
+29. kill - Kill the process
+kill 8943
+
+30. env - Print environment variables
+env
